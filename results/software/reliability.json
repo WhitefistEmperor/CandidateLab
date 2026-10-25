@@ -1,0 +1,104 @@
+{
+  "scope": "Fresh same-simulator evaluation; not external real-world validation",
+  "policy": {
+    "model": "Logistic Regression",
+    "threshold": 0.68,
+    "recall_floor": 0.5,
+    "minimum_predicted_selected": 50,
+    "threshold_grid": "0.50 through 0.90, step 0.01",
+    "eligible_policy_found": true,
+    "source": "Out-of-fold predictions from original training records only",
+    "validation_caveat": "Hyperparameters were selected on these training records; OOF policy results are development estimates, not an unbiased final test.",
+    "model_sha256": "b424efabd9ded8197c8142a11df1386186943f1593207f85451bc36ef996f90c",
+    "fresh_seed_predeclared": 20261013,
+    "fresh_corruption_seed_predeclared": 20261014
+  },
+  "fresh_cleaning": {
+    "dataset_type": "synthetic data-entry cleaning exercise",
+    "raw_rows": 9200,
+    "label_cells_standardized": 453,
+    "exact_duplicate_rows_removed": 200,
+    "review_rows": 20,
+    "cleaned_rows": 8980,
+    "remaining_missing_cells": 2284,
+    "imputation_policy": "No global filling. Median imputation is fitted inside each training fold only.",
+    "reference_policy": "synthetic_reference.csv is not read during cleaning or training."
+  },
+  "default": {
+    "threshold": 0.5,
+    "rows": 8980,
+    "accuracy": 0.7551224944320712,
+    "precision": 0.7069978632478633,
+    "recall": 0.7060549479861297,
+    "f1": 0.7065260910182838,
+    "accuracy_95_ci": [
+      0.7461207205057178,
+      0.763906089406562
+    ],
+    "precision_95_ci": [
+      0.6922127284189916,
+      0.7213586611476652
+    ],
+    "recall_95_ci": [
+      0.6912671071328007,
+      0.7204209476259811
+    ],
+    "f1_95_ci": [
+      0.6945685024567964,
+      0.7179032263914925
+    ],
+    "predicted_selected": 3744,
+    "true_selected": 3749,
+    "false_selections": 1097,
+    "missed_selections": 1102,
+    "confusion_matrix": [
+      [
+        4134,
+        1097
+      ],
+      [
+        1102,
+        2647
+      ]
+    ]
+  },
+  "precision_focused": {
+    "threshold": 0.68,
+    "rows": 8980,
+    "accuracy": 0.7363028953229399,
+    "precision": 0.7980146741476046,
+    "recall": 0.4931981861829821,
+    "f1": 0.6096274315858886,
+    "accuracy_95_ci": [
+      0.7270896227318479,
+      0.7453140833501503
+    ],
+    "precision_95_ci": [
+      0.7811800229517527,
+      0.8138627770427533
+    ],
+    "recall_95_ci": [
+      0.4772096479195925,
+      0.5092006493019622
+    ],
+    "f1_95_ci": [
+      0.5956478779669948,
+      0.624032173459247
+    ],
+    "predicted_selected": 2317,
+    "true_selected": 3749,
+    "false_selections": 468,
+    "missed_selections": 1900,
+    "confusion_matrix": [
+      [
+        4763,
+        468
+      ],
+      [
+        1900,
+        1849
+      ]
+    ]
+  },
+  "confidence_interval_method": "95% Wilson intervals for binomial proportions; 1000 row-count bootstrap replicates for F1. Conditional on the fitted model; simulator uncertainty is not included."
+}

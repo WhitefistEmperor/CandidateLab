@@ -1,0 +1,11 @@
+{
+  "dataset_type": "synthetic data-entry cleaning exercise",
+  "raw_rows": 9200,
+  "label_cells_standardized": 459,
+  "exact_duplicate_rows_removed": 200,
+  "review_rows": 20,
+  "cleaned_rows": 8980,
+  "remaining_missing_cells": 2286,
+  "imputation_policy": "No global filling. Median imputation is fitted inside each training fold only.",
+  "reference_policy": "synthetic_reference.csv is not read during cleaning or training."
+}

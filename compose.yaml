@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports:
+      - "127.0.0.1:8502:8502"
+    volumes:
+      - recruitment-data:/app/instance
+    restart: unless-stopped
+
+volumes:
+  recruitment-data:

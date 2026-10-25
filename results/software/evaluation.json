@@ -1,0 +1,91 @@
+{
+  "dataset_type": "Synthetic simulation; not evidence of real hiring accuracy",
+  "selected_model": "Logistic Regression",
+  "training_rows": 7184,
+  "test_rows": 1796,
+  "train_selected_fraction": 0.43610801781737196,
+  "test_selected_fraction": 0.43596881959910916,
+  "candidate_id_overlap": 0,
+  "parameters": {
+    "Logistic Regression": {
+      "model__C": 0.1
+    },
+    "Decision Tree": {
+      "model__max_depth": 7,
+      "model__min_samples_leaf": 50
+    },
+    "Random Forest": {
+      "model__max_depth": 8,
+      "model__min_samples_leaf": 10
+    }
+  },
+  "confusion_matrices": {
+    "Logistic Regression": [
+      [
+        832,
+        181
+      ],
+      [
+        247,
+        536
+      ]
+    ],
+    "Decision Tree": [
+      [
+        822,
+        191
+      ],
+      [
+        257,
+        526
+      ]
+    ],
+    "Random Forest": [
+      [
+        843,
+        170
+      ],
+      [
+        256,
+        527
+      ]
+    ]
+  },
+  "baseline_accuracy": 0.5640311804008908,
+  "information_comparison": [
+    {
+      "Inputs": "Background only",
+      "CV macro F1": 0.6381153194248317,
+      "Test macro F1": 0.6408444557351207,
+      "Accuracy": 0.6581291759465479
+    },
+    {
+      "Inputs": "Assessment only",
+      "CV macro F1": 0.7620110498978402,
+      "Test macro F1": 0.7594348287545414,
+      "Accuracy": 0.7661469933184856
+    },
+    {
+      "Inputs": "Combined",
+      "CV macro F1": 0.7618441503836315,
+      "Test macro F1": 0.7550388782664117,
+      "Accuracy": 0.7616926503340757
+    }
+  ],
+  "features": [
+    "cgpa",
+    "internships",
+    "projects",
+    "coding_correctness",
+    "dsa",
+    "debugging",
+    "oop",
+    "dbms",
+    "os_networks",
+    "project_review",
+    "problem_solving",
+    "communication"
+  ],
+  "split_seed": 42,
+  "model_selection": "Training CV macro F1 only"
+}

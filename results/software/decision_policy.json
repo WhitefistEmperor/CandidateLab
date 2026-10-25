@@ -1,0 +1,13 @@
+{
+  "model": "Logistic Regression",
+  "threshold": 0.68,
+  "recall_floor": 0.5,
+  "minimum_predicted_selected": 50,
+  "threshold_grid": "0.50 through 0.90, step 0.01",
+  "eligible_policy_found": true,
+  "source": "Out-of-fold predictions from original training records only",
+  "validation_caveat": "Hyperparameters were selected on these training records; OOF policy results are development estimates, not an unbiased final test.",
+  "model_sha256": "b424efabd9ded8197c8142a11df1386186943f1593207f85451bc36ef996f90c",
+  "fresh_seed_predeclared": 20261013,
+  "fresh_corruption_seed_predeclared": 20261014
+}

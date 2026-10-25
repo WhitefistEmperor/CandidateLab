@@ -1,0 +1,12 @@
+.git
+.venv
+__pycache__
+*.log
+data/candidates
+data/processed
+results/interview
+instance
+.env
+.env.cloud
+test_*.py
+candidate-cloud.zip

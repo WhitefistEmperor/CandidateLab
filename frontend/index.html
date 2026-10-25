@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Candidate Lab · Software Engineer Assessment</title><link rel="stylesheet" href="/assets/style.css"><script src="/assets/app.js" defer></script></head>
+<body>
+<header class="topbar"><a class="brand" href="/">Candidate<span>Lab</span></a><span class="role">Software engineering</span><a class="demo" href="/">Back to workspace</a></header>
+<main>
+<div class="intro"><div><h1>Software engineer<br>candidate assessment.</h1><p>Bring technical assessments together.<br>See the predicted selection result and the inputs behind it.</p></div><div class="context"><strong>Entry-level software engineer</strong><span>12 assessment inputs</span><span>Locally trained classification model</span></div></div>
+<div class="notice">Use completed interview scores. Save a candidate assessment from the recruitment workspace; this page is for individual and batch comparisons.</div>
+<nav class="tabs" aria-label="Assessment mode"><button id="single-tab" class="active" aria-pressed="true">Individual assessment</button><button id="batch-tab" aria-pressed="false">Batch comparison</button></nav>
+<section id="single-view" class="workspace">
+<form id="assessment-form"><div class="form-heading"><h2>Candidate assessment</h2><button id="reset" type="reset">Reset inputs</button></div><p class="hint">Enter scores from an already completed assessment. All fields are required.</p><div id="fields"></div><div class="submit-row"><button type="submit" class="primary" id="predict">Predict selection <span aria-hidden="true">→</span></button><span>Same frozen threshold for every assessment.</span></div></form>
+<aside class="result-panel" aria-live="polite" aria-atomic="true"><h2>Assessment result</h2><div id="result"><div class="empty-mark" aria-hidden="true">—</div><h3>Your result appears here.</h3><p>Complete the assessment and submit to see the model's estimate and contributing inputs.</p></div><div class="result-foot"><strong>Model classification</strong><p>Scores reflect the model’s learned simulation. A higher model score is not a calibrated chance of a job offer.</p></div></aside>
+</section>
+<section id="batch-view" hidden><div class="batch-heading"><div><h2>Compare a candidate batch</h2><p>Upload a CSV or JSON array using the same 12 assessment fields. Maximum 500 candidates.</p></div><button id="template" class="secondary">Download template</button></div><label class="upload">Choose assessment file<input type="file" id="batch-file" accept=".csv,.json,text/csv,application/json"></label><button id="batch-predict" class="primary">Compare candidates</button><div id="batch-results" aria-live="polite"></div></section>
+<p id="error" class="error" role="alert" hidden></p>
+<footer><span>Interview Candidate Selection Predictor</span><span id="model-label">Connecting to the model…</span></footer>
+</main></body></html>

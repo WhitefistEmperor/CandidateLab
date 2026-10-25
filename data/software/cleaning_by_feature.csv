@@ -1,0 +1,13 @@
+Feature,Original missing,Non-numeric entries,Invalid range/type,Missing after validation
+cgpa,202,0,0,202
+internships,206,0,49,255
+projects,207,0,0,207
+coding_correctness,209,0,0,209
+dsa,204,0,93,297
+debugging,204,0,0,204
+oop,203,0,0,203
+dbms,200,0,0,200
+os_networks,203,0,0,203
+project_review,209,0,0,209
+problem_solving,206,0,0,206
+communication,202,0,0,202

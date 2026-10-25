@@ -1,0 +1,25 @@
+{
+  "kind": "synthetic demonstration, not real hiring records",
+  "generation_seed": 42,
+  "corruption_seed": 314,
+  "generated_candidates": 9000,
+  "raw_exercise_rows_including_duplicates": 9200,
+  "features": [
+    "cgpa",
+    "internships",
+    "projects",
+    "coding_correctness",
+    "dsa",
+    "debugging",
+    "oop",
+    "dbms",
+    "os_networks",
+    "project_review",
+    "problem_solving",
+    "communication"
+  ],
+  "source": "generate_software_data.py in this project",
+  "assumptions": "Correlated fictional abilities, noisy observed scores, stochastic logistic selection with an interaction and low-coding penalty. All coefficients are invented, not empirically validated.",
+  "quality_exercise": "180 missing entries per feature, 90 out-of-range DSA entries, 45 invalid internship counts, 20 extensively incomplete rows, label whitespace/case variants, 200 duplicate copies. Defects can overlap.",
+  "reference_sha256": "5463eb1f61817da3c6928ffce383a2b869dcd1c3abcccad22ed5cb81fe86338d"
+}
